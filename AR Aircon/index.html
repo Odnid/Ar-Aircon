@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Air Conditioner Placement Tool</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@latest/dist/model-viewer.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #viewer-container {
+            width: 100%;
+            max-width: 600px;
+            aspect-ratio: 1 / 1;
+            background: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        model-viewer {
+            width: 100%;
+            height: 100%;
+        }
+
+        .instructions {
+            margin-top: 15px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Visualize Your Air Conditioner</h1>
+        <p>Use the tool below to see how the air conditioner looks in your space!</p>
+    </header>
+
+    <div id="viewer-container">
+        <model-viewer 
+        src="5394c50890d94351abf4468e979f11b0.glb" alt="3D model of an air conditioner" ar ar-scale="auto" camera-controls ar-modes="scene-viewer webxr"
+        environment-image="neutral" poster="https://modelviewer.dev/shared-assets/models/poster.jpg">
+        </model-viewer>
+    </div>
+
+    <div class="instructions">
+        <p>Tap the AR icon to place the air conditioner in your room.</p>
+    </div>
+
+    <button onclick="alert('Coming soon: Room customization options!')">
+        Customize Room
+    </button>
+</body>
+</html>
